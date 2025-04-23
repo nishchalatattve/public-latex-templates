@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{ImagePlayground}
+Apple Inc.
+\newblock Image playground.
+\newblock
+  \url{https://www.apple.com/newsroom/2024/12/apple-intelligence-now-features-image-playground-genmoji-and-more/},
+  January 2025.
+
+\bibitem{DK86}
+D.E. Knuth.
+\newblock {\em The {\TeX} book}.
+\newblock Addison Wesley, 1986.
+
+\bibitem{DK89}
+D.E. Knuth.
+\newblock Typesetting concrete mathematics.
+\newblock {\em TUGboat}, 10(1), 1989.
+
+\end{thebibliography}
