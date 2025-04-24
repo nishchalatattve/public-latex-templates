@@ -1,0 +1,46 @@
+% ----------------------------- Colours -----------------------------
+\input{settings/colours}
+% --------------------------- Fonts ---------------------------
+\input{settings/fonts}
+\color{ft_black}
+% ----------------------------- Typearea -----------------------------
+%\KOMAoption{DIV}{12}
+% \KOMAoption{twocolumn}{on}
+\KOMAoption{twoside}{semi}
+%\setlength{\columnsep}{21pt}
+%\usepackage[onehalfspacing]{setspace}
+%\usepackage{multicol}
+% \RenewDocumentCommand{\arraystretch}{}{1.618}
+% ----------------------- Headers and footers ----------------------
+\usepackage[automark]{scrlayer-scrpage}
+\KOMAoptions{headinclude, headsepline}
+\KOMAoption{footinclude}{on}
+% c stands for centre, o stands for outter
+\chead{\bfseries \normalfont Report template}
+\ohead{\pagemark}
+\cfoot{Internal use}
+\ofoot{}
+% ----------------------------- Helpers -----------------------------
+\usepackage[british]{babel}
+\usepackage{microtype}
+\usepackage{blindtext}
+\usepackage{booktabs}
+\usepackage{enumitem}
+% ----------------------------- Graphics -----------------------------
+\usepackage{graphicx}
+%\graphicspath{{figures/}}
+\setkeys{Gin}{width=0.75\linewidth}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+% ----------------------------- Hyperref -----------------------------
+\input{settings/url}
+\input{settings/metadata}
+% ----------------------- Maths and Physics ------------------------
+\usepackage{amsmath}
+\usepackage[separate-uncertainty=true]{siunitx}
+\DeclareMathOperator{\sinc}{sinc}
+\RenewDocumentCommand{\vec}{m}{\symbf{#1}}
+% -------------------- Recalculate typearea ----------------------
+%\recalctypearea
