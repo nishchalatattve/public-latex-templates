@@ -1,1 +1,3 @@
-# Full title of the document
+# Artile template
+
+A simple artile template.
