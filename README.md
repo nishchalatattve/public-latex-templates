@@ -7,6 +7,6 @@ Designed to work with my customised devcontainer and VS code.
 - [A simple artile template](./article/)
 - [An artile template with references](./article_with_refs/)
 
-## Usage
+## Example
 
-`$ gtex article`
+`$ gtex ar "The risk of doing nothing with AI innovation in HART"`
