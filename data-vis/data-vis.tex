@@ -1,0 +1,21 @@
+%% Data visualisation
+%% by haozepangthegoat
+%%
+%%
+\documentclass[border=8pt]{standalone}
+\input{settings/settings.tex}
+% ------ Document------
+\begin{document}
+% ------- Body ------
+\begin{tikzpicture}
+    \begin{axis}[
+        title={Differaction},
+        xlabel={time},
+        ylabel={Intensity},
+        grid
+    ]
+       \addplot [only marks, mark options={scale=0.2}] table
+       [col sep=comma, x=x, y=y] {data.csv};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

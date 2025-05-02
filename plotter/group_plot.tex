@@ -1,0 +1,68 @@
+%% Group plot reference
+%% by haozepangthegoat
+%%
+%%
+\documentclass[border=8pt]{standalone}
+\input{settings/settings.tex}
+\pgfplotsset{every axis plot post/.append style={
+    samples=80,
+    thick, smooth,
+    mark= none
+}}
+% ------ Document------
+\begin{document}
+% ------- Body ------
+    \begin{tikzpicture}
+
+        \begin{groupplot}[
+            group style={
+                group size=2 by 2,
+                horizontal sep=2cm, 
+                vertical sep=2cm,
+            },
+            title={Plot of $e^x$ and $\frac{\sin(x)}{x}$},
+        ]
+
+            \nextgroupplot[
+                title={Plot of $e^x$},
+                xlabel={$x$},
+                ylabel={$y$},
+                domain=-2:2,
+                grid,
+            ]
+            \addplot {e^x};
+            \addlegendentry{$e^x$}
+
+            \nextgroupplot[
+                title={$\frac{\sin(x)}{x}$},
+                xlabel={frequency},
+                ylabel={Amplitude},
+                domain=-2:2,
+                grid
+            ]
+            \addplot {sin(deg(x))/x};
+            \addlegendentry{$\frac{\sin(x)}{x}$}
+
+            \nextgroupplot[
+                title={Another Plot},
+                xlabel={frequency},
+                ylabel={Amplitude},
+                domain=-10:10,
+                grid
+            ]
+            \addplot {sin(deg(x))/x};
+            \addlegendentry{$\frac{\sin(x)}{x}$}
+
+            \nextgroupplot[
+                title={Another Plot},
+                xlabel={frequency},
+                ylabel={Amplitude},
+                domain=-20:20,
+                grid
+            ]
+            \addplot {sin(deg(x))/x};
+            \addlegendentry{$\frac{\sin(x)}{x}$}
+        \end{groupplot}
+        \end{tikzpicture}
+
+\end{document}

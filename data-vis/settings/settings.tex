@@ -1,0 +1,22 @@
+\input{settings/colours}
+\input{settings/fonts}
+\color{ft_black}
+% ------------ Graphics --------------
+% \usepackage{graphicx}
+%\graphicspath{{figures/}}
+% \setkeys{Gin}{width=0.75\linewidth}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
+% ------------ Hyperref -------------
+\input{settings/metadata}
+% ---------- Maths and Physics --------------
+\usepackage{amsmath}
+\usepackage[separate-uncertainty=true]{siunitx}
+\DeclareMathOperator{\sinc}{sinc}
+\RenewDocumentCommand{\vec}{m}{\symbf{#1}}
+
+
+

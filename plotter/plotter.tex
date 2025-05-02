@@ -1,0 +1,39 @@
+%% Plotter
+%% by haozepangthegoat
+%%
+%%
+\documentclass[border=8pt]{standalone}
+\input{settings/settings.tex}
+% ------ Grids ---------
+\tikzset{grids/.pic={
+        \draw[thin,dotted] (-6,-6) grid (6,6);
+        \draw[->] (-6,0) -- (6,0);
+        \draw[->] (0,-6) -- (0,6);
+}}
+\pgfplotsset{every axis plot post/.append style={
+    samples=80,
+    thick, smooth,
+    mark= none
+}}
+% ------ Document------
+\begin{document}
+% ------- Body ------
+    \begin{tikzpicture}
+        % \draw pic {grids};
+        \begin{axis}[
+            axis lines=center,
+            domain=-2:2,
+            grid,
+            title={Plot of $e^x$ and $\frac{\sin(x)}{x}$},
+            xlabel={$x$},
+            ylabel={$y$},
+        ]
+            \addplot {e^x};
+            \addlegendentry{$e^x$}
+            % \addplot {x^7 + 5*x^6 + x^4 - x^3 + x^2 - 2};
+            \addplot {sin(deg(x))/x};
+            \addlegendentry{$\frac{\sin(x)}{x}$}
+        \end{axis}
+
+    \end{tikzpicture}
+\end{document}
