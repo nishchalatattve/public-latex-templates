@@ -21,12 +21,11 @@
     \begin{tikzpicture}
         % \draw pic {grids};
         \begin{axis}[
-            axis lines=center,
             domain=-2:2,
-            grid,
             title={Plot of $e^x$ and $\frac{\sin(x)}{x}$},
             xlabel={$x$},
             ylabel={$y$},
+            grid,
         ]
             \addplot {e^x};
             \addlegendentry{$e^x$}
