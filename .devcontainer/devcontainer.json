@@ -1,0 +1,22 @@
+{
+	"name": "HP LaTeX workspace",
+	"dockerComposeFile": "docker-compose.yaml",
+	"service": "latax-dev-container",
+	"workspaceFolder": "/home/nishchalatattve/latex_workspace",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-toolsai.datawrang",
+				"ms-toolsai.jupyter",
+				"esbenp.prettier-vscode",
+				"streetsidesoftware.code-spell-checker",
+				"james-yu.latex-workshop",
+			]
+		},
+		"settings": {
+			"dev.containers.copyGitConfig": true,
+			"dev.containers.gitCredentialHelperConfigLocation": "global"
+		}
+	}
+}

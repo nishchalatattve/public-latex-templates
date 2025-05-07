@@ -1,0 +1,9 @@
+services:
+  latax-dev-container:
+    image: latax-dev-container:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../:/home/nishchalatattve/latex_workspace:cached
+    command: sleep infinity
