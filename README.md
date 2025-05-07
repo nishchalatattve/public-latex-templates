@@ -12,3 +12,5 @@ Designed to work with my customised devcontainer and VS code.
 ## Example
 
 `$ gtex ar "The risk of doing nothing with AI innovation in HART"`
+
+## [.devcontainer](./.devcontainer) is the corresponding dev container file
