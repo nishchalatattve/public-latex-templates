@@ -8,7 +8,7 @@ basic_test(){
     echo "Creating a basic test template ..."
     # Main files
     curl -fsSL -o  "${PROJECT_NAME}.tex" https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/basic_test/test.tex
-    echo "Done"
+    echo "Done!"
 }
 
 plotter(){
@@ -24,7 +24,7 @@ plotter(){
     curl -fsSOL https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/plotter/settings/metadata.tex
     curl -fsSOL https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/plotter/settings/settings.tex
 
-    echo "Done"
+    echo "Done!"
 
 }
 
@@ -41,7 +41,7 @@ data_vis(){
     curl -fsSOL https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/data-vis/settings/metadata.tex
     curl -fsSOL https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/data-vis/settings/settings.tex
 
-    echo "Done"
+    echo "Done!"
 }
 
 simple_article(){
@@ -58,7 +58,7 @@ simple_article(){
     curl -fsSOL https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/article/settings/settings.tex
     curl -fsSOL https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/article/settings/url.tex
 
-    echo "Done"
+    echo "Done!"
 }
 article_with_refs(){
     echo "Creating an article template with references ..."
@@ -75,12 +75,12 @@ article_with_refs(){
     curl -fsSOL https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/article_with_refs/settings/settings.tex
     curl -fsSOL https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/article_with_refs/settings/url.tex
 
-    echo "Done"
+    echo "Done!"
 }
 
 check_curl (){
   if command -v curl > /dev/null; then
-    echo "Detected curl"
+    echo "Launching gtex..."
   else
     echo "curl not found, please install it."
     exit 1
