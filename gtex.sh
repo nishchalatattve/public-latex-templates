@@ -54,7 +54,6 @@ simple_article(){
     cd settings
     curl -fsSOL https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/article/settings/colours.tex
     curl -fsSOL https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/article/settings/fonts.tex
-    curl -fsSOL https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/article/settings/metadata.tex
     curl -fsSOL https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/article/settings/settings.tex
     curl -fsSOL https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/article/settings/url.tex
 

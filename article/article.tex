@@ -4,7 +4,33 @@
 %%
 \documentclass{scrartcl}
 \input{settings/settings}
-
+% ------ Graphics ------
+\usepackage{graphicx}
+%\graphicspath{{figures/}}
+\setkeys{Gin}{width=0.75\linewidth}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+% ------ Headers and footers ------
+\usepackage[automark]{scrlayer-scrpage}
+\KOMAoptions{headinclude, headsepline}
+\KOMAoption{footinclude}{on}
+% c stands for centre, o stands for outter
+\chead{\bfseries \normalfont Report template}
+\ohead{\pagemark}
+\cfoot{Internal use}
+\ofoot{}
+% ------ Hyperref ------
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\hypersetup{
+    pdfauthor   = {Haoze Pang},
+%    pdftitle    = {the title},
+    pdfcreator  = {LuaLaTeX},
+%    pdfsubject  = {},
+%    pdfkeywords = {},
+}
 % Document
 \begin{document}
 
