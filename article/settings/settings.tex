@@ -1,9 +1,9 @@
-% ----------------------------- Colours -----------------------------
+% ------ Colours ------
 \input{settings/colours}
-% --------------------------- Fonts ---------------------------
+% ------ Fonts ------ 
 \input{settings/fonts}
 \color{ft_black}
-% ----------------------------- Typearea -----------------------------
+% ------Typearea ------
 %\KOMAoption{DIV}{12}
 % \KOMAoption{twocolumn}{on}
 \KOMAoption{twoside}{semi}
@@ -11,7 +11,7 @@
 %\usepackage[onehalfspacing]{setspace}
 %\usepackage{multicol}
 % \RenewDocumentCommand{\arraystretch}{}{1.618}
-% ----------------------- Headers and footers ----------------------
+%  Headers and footers 
 \usepackage[automark]{scrlayer-scrpage}
 \KOMAoptions{headinclude, headsepline}
 \KOMAoption{footinclude}{on}
@@ -20,13 +20,13 @@
 \ohead{\pagemark}
 \cfoot{Internal use}
 \ofoot{}
-% ----------------------------- Helpers -----------------------------
+% ------ Helpers ------ 
 \usepackage[british]{babel}
 \usepackage{microtype}
 \usepackage{blindtext}
 \usepackage{booktabs}
 \usepackage{enumitem}
-% ----------------------------- Graphics -----------------------------
+% ------ Graphics ------
 \usepackage{graphicx}
 %\graphicspath{{figures/}}
 \setkeys{Gin}{width=0.75\linewidth}
@@ -34,13 +34,13 @@
 \usetikzlibrary{positioning}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
-% ----------------------------- Hyperref -----------------------------
+% ------ Hyperref ------
 \input{settings/url}
 \input{settings/metadata}
-% ----------------------- Maths and Physics ------------------------
+% ------ Maths and Physics ------
 \usepackage{amsmath}
 \usepackage[separate-uncertainty=true]{siunitx}
 \DeclareMathOperator{\sinc}{sinc}
 \RenewDocumentCommand{\vec}{m}{\symbf{#1}}
-% -------------------- Recalculate typearea ----------------------
+% ------ Recalculate typearea ------
 %\recalctypearea
