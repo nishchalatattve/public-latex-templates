@@ -2,18 +2,15 @@
 
 set -eu
 
-usage="Usage: gtex <template_type>" 
+usage="Usage: gtex <TEMPLATE_TYPE> <PROJECT_NAME>" 
 
 # Checks
 check_os(){
     if [ "$(uname -s)" == "Darwin" ]; then
-        printf "Script running on MacOS...\r"
-        sleep 1s
+        printf "\r"
 
     elif [ "$(uname -s)" == "Linux" ]; then
-        printf "Script running on Linux...\r"
-        sleep 1s
-
+        printf "\r"
     else
         echo "Unsupported OS"
         exit 1
@@ -31,40 +28,40 @@ check_curl (){
 }
 
 check_args(){
-    if [[ $# == 0 ]]; then
-        echo "No arguments provided."
-        echo "$usage"
-        exit 1
-    elif [[ $# == 1 ]]; then
-        PROJECT_NAME=$1
-    elif [[ $# == 2 ]]; then
-        PROJECT_NAME=$2
-    else
-        echo "Too many arguments provided."
+    if [[ $# != 2 ]]; then
+        echo "Invalid arguments."
         echo "$usage"
         exit 1
     fi
-
+}
 run_checks (){
-    check_os
-    check_curl
+    # check_os
+    check_args "$@"
+    # check_curl
 }
 
 #
 as (){
-    curl -fsSOL "https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/"
+    echo "Creating a simple article template ..."
+
+    curl -fsSL "https://raw.githubusercontent.com/nishchalatattve/public-latex-templates/refs/heads/master/Simple%20article.tex" -o "$2.tex"
+
+    echo "Done!"
 } 
 execute(){
 
-    if [ $1 == "as" ]; then
-        simple_article 
+    if [[ $1 == "as" ]]; then
+        as "$@"
+    else
+        echo "$1 is not a valid template type."
+        exit 1
     fi
 
 }
 
 
 main(){
-    run_checks
+    run_checks "$@"
     execute "$@"
 }
 
